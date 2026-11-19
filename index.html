@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index,follow">
+<title>Politique de confidentialité — Créateurs Studio</title>
+<!--
+  Page à héberger en HTTPS (GitHub Pages ou hébergeur classique).
+  Adresse e-mail publique : ZSedreddine@gmail.com
+  À déclarer aussi dans le compte Google Play Console (identité du développeur).
+-->
+<style>
+  :root { --bg:#0B0710; --panel:#171021; --pink:#FF3D77; --text:#F5F1F7; --muted:#B9AFC4; --line:#35243F; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif; line-height:1.65; }
+  .wrap { max-width:860px; margin:0 auto; padding:32px 20px 80px; }
+  header { border-bottom:1px solid var(--line); padding-bottom:24px; margin-bottom:28px; }
+  h1 { font-size:1.9rem; margin:0 0 6px; color:var(--pink); }
+  .meta { color:var(--muted); font-size:.9rem; }
+  .langs { display:flex; gap:8px; margin-top:18px; }
+  .langs button { background:transparent; border:1px solid var(--line); color:var(--muted); padding:8px 16px; border-radius:20px; cursor:pointer; font-size:.9rem; }
+  .langs button.active { background:var(--pink); border-color:var(--pink); color:#fff; font-weight:600; }
+  h2 { font-size:1.25rem; margin:32px 0 10px; color:var(--pink); }
+  p, li { color:var(--text); }
+  ul { padding-left:22px; }
+  .box { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin:18px 0; }
+  .summary { border-left:4px solid var(--pink); }
+  .note { border-left:4px solid var(--muted); }
+  table { width:100%; border-collapse:collapse; margin:16px 0; font-size:.92rem; }
+  th, td { border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top; }
+  th { background:var(--panel); color:var(--pink); }
+  a { color:var(--pink); }
+  code { background:var(--panel); padding:2px 6px; border-radius:4px; font-size:.88em; }
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem; }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Créateurs Studio</h1>
+  <div class="meta">Politique de confidentialité · Privacy Policy · Version 1.2.0</div>
+  <div class="meta">Dernière mise à jour / Last updated : 19 novembre 2026</div>
+  <div class="langs">
+    <button id="btn-fr" class="active" onclick="setLang('fr')">🇫🇷 Français</button>
+    <button id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+  </div>
+</header>
+
+<section id="fr">
+
+<div class="box summary">
+  <strong>En résumé :</strong> Créateurs Studio fonctionne sans compte central et sans serveur de l'éditeur : vos projets et vos informations restent sur votre appareil. <strong>L'éditeur ne collecte aucune donnée personnelle.</strong>
+</div>
+
+<h2>1. Responsable</h2>
+<p>L'éditeur de Créateurs Studio est <strong>SEDREDDINE ZAKARIA</strong>. Pour toute question : <strong>ZSedreddine@gmail.com</strong>.</p>
+
+<h2>2. Données collectées par l'éditeur</h2>
+<p><strong>Aucune.</strong> L'application n'a aucun serveur de l'éditeur, aucun compte central, aucun outil d'analyse, aucun rapport de plantage, aucune publicité et aucun traceur. L'éditeur ne reçoit jamais votre e-mail, vos projets, vos clés API ni vos informations bancaires.</p>
+
+<h2>3. Abonnement et paiement (Google Play)</h2>
+<p>L'abonnement Premium coûte <strong>15,00 €/mois</strong> et est traité exclusivement par Google Play Billing. L'application ne lit que le prix et l'état de l'abonnement auprès de Google. Elle ne reçoit aucune donnée bancaire : ni carte, ni IBAN. Ces informations sont gérées par Google, conformément à sa <a href="https://policies.google.com/privacy" rel="noopener">politique de confidentialité</a>. Vous pouvez gérer ou résilier votre abonnement dans le Play Store → Paiements et abonnements.</p>
+
+<h2>4. Adresse e-mail du profil</h2>
+<p>L'e-mail demandé dans « Réglages → Profil créateur » est obligatoire avant la souscription. Il est <strong>stocké uniquement sur votre appareil</strong> (format validé, minuscules), <strong>jamais transmis</strong> à l'éditeur, à un tiers ou à Google par l'application, et <strong>jamais utilisé à des fins marketing</strong>. Vous pouvez le remplacer par une autre adresse valide à tout moment ; sa suppression effective passe par « Effacer toutes les données » ou la désinstallation.</p>
+
+<h2>5. Données stockées sur votre appareil</h2>
+<table>
+  <tr><th>Catégorie</th><th>Exemples</th><th>Emplacement</th></tr>
+  <tr><td>Projets</td><td>titre, plateforme, accroche, script, description, hashtags, publication</td><td>Base SQLite locale <code>creatorshub.db</code></td></tr>
+  <tr><td>Idées et plans</td><td>idées de vidéos, plans de tournage, notes</td><td>Base SQLite locale</td></tr>
+  <tr><td>Statistiques</td><td>vues, likes, commentaires, abonnés, revenus saisis</td><td>Base SQLite locale</td></tr>
+  <tr><td>Éditeur</td><td>brouillons, exports MP4, miniatures</td><td>Base SQLite et fichiers de l'app</td></tr>
+  <tr><td>Profil et réglages</td><td>nom, e-mail, niche, langue, préférences</td><td>Base SQLite locale</td></tr>
+  <tr><td>Clés API</td><td>clé IA et clé musicale, si vous les saisissez</td><td>Coffre sécurisé (Android Keystore / iOS Keychain)</td></tr>
+  <tr><td>Médias générés</td><td>images IA, pistes audio IA</td><td>Dossier privé de l'application</td></tr>
+  <tr><td>Vidéos exportées</td><td>fichiers MP4 partagés depuis l'éditeur</td><td>Galerie choisie par l'utilisateur</td></tr>
+</table>
+<p>Ces données ne quittent pas votre appareil, sauf dans le cas de la section 6.</p>
+<div class="box note">
+  La base SQLite locale n'est <strong>pas chiffrée par l'application</strong> : elle est protégée par le stockage privé du système (sandbox). Seules les clés API sont chiffrées dans le coffre sécurisé et <strong>exclues des sauvegardes automatiques Android et des transferts d'appareil</strong>. Certaines préférences techniques peuvent toutefois être incluses dans ces sauvegardes. Quelques projets de démonstration sont créés localement au premier lancement.
+</div>
+
+<h2>6. Services tiers optionnels</h2>
+<p>Les fonctions IA sont <strong>désactivées par défaut</strong> et ne fonctionnent que si vous activez l'option et fournissez votre propre clé. Votre prompt et votre clé sont alors envoyés en <strong>HTTPS</strong> (avec les services proposés par défaut) directement au fournisseur que vous avez configuré — texte, image ou musique. Si vous saisissez une autre URL, le chiffrement dépend de cette URL. L'éditeur n'a connaissance ni de votre clé, ni du contenu envoyé, ni des réponses. Les conditions du fournisseur s'appliquent. Retirer la clé dans les réglages désactive immédiatement ces envois.</p>
+<p><strong>Composants Google embarqués :</strong> Google Play Billing et Firebase Cloud Messaging (via la bibliothèque de notifications). <strong>Aucun token push n'est enregistré ni transmis</strong> : seules des notifications locales sont utilisées. Le service <em>Install Referrer</em> de Google Play peut aussi être initialisé par la bibliothèque d'achat. Ces composants ne reçoivent ni votre e-mail ni vos projets.</p>
+<p><strong>Export volontaire :</strong> la sauvegarde JSON exportable depuis Réglages → Données contient vos projets, réglages et votre adresse e-mail. Vous êtes seul responsable du fichier une fois partagé. Aucun autre service tiers ne reçoit de données utilisateur de la part de l'application.</p>
+
+<h2>7. Autorisations Android</h2>
+<table>
+  <tr><th>Autorisation</th><th>Finalité</th></tr>
+  <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Abonnement Google Play et services IA configurés par vous</td></tr>
+  <tr><td><code>READ_MEDIA_IMAGES / VIDEO / AUDIO</code>, <code>READ_MEDIA_VISUAL_USER_SELECTED</code></td><td>Importer et enregistrer vos médias</td></tr>
+  <tr><td><code>FOREGROUND_SERVICE</code>, <code>MODIFY_AUDIO_SETTINGS</code>, <code>WAKE_LOCK</code></td><td>Lecture audio/vidéo pendant le montage</td></tr>
+  <tr><td><code>SCHEDULE_EXACT_ALARM</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>POST_NOTIFICATIONS</code>, <code>VIBRATE</code></td><td>Rappels de publication locaux</td></tr>
+  <tr><td><code>com.android.vending.BILLING</code></td><td>Traitement de l'abonnement par Google Play</td></tr>
+</table>
+<p>Le manifeste contient aussi des autorisations techniques ajoutées par les bibliothèques Google (réseau, réveil, démarrage au boot, <em>Install Referrer</em>, biométrie) et par certains fabricants (badges d'icône). Elles ne donnent pas accès à vos contacts, messages, localisation, caméra ou micro.</p>
+
+<h2>8. Conservation et suppression</h2>
+<p>Vos données restent sur votre appareil tant que l'application est installée ; l'éditeur ne conserve rien et il n'y a pas d'expiration automatique. « Réglages → Données → Effacer toutes les données » supprime la base locale, <strong>y compris votre e-mail</strong>, mais <strong>conserve</strong> les clés API, les fichiers médias générés, les vidéos de votre galerie et les rappels déjà planifiés. Retirez une clé via le bouton dédié des réglages IA ; effacez les vidéos depuis votre application Photos. La désinstallation supprime la base, les fichiers générés et les clés du coffre sécurisé ; les vidéos exportées restent dans la galerie. La résiliation de l'abonnement est gérée par Google et n'efface pas vos données locales.</p>
+
+<h2>9. Enfants et transferts</h2>
+<p>L'application n'est pas destinée aux enfants de moins de 13 ans (ou 16 ans selon le pays) et ne collecte pas leurs données. L'éditeur ne transfère aucune donnée ; les seuls transferts sont vers Google et le fournisseur IA que vous choisissez.</p>
+
+<h2>10. Modifications et contact</h2>
+<p>Toute modification met à jour la date en tête de page. Contact : <strong>ZSedreddine@gmail.com</strong> — Éditeur : SEDREDDINE ZAKARIA.</p>
+
+</section>
+
+<section id="en" hidden>
+
+<div class="box summary">
+  <strong>In short:</strong> Créateurs Studio works without a central account and without a publisher server: your projects and information stay on your device. <strong>The publisher does not collect any personal data.</strong>
+</div>
+
+<h2>1. Responsibility</h2>
+<p>Créateurs Studio is published by <strong>SEDREDDINE ZAKARIA</strong>. For any question: <strong>ZSedreddine@gmail.com</strong>.</p>
+
+<h2>2. Data collected by the publisher</h2>
+<p><strong>None.</strong> The app has no publisher server, no central account, no analytics, no crash reporting, no advertising and no tracker. The publisher never receives your email, projects, API keys or banking information.</p>
+
+<h2>3. Subscription and payment (Google Play)</h2>
+<p>The Premium subscription costs <strong>€15.00/month</strong> and is processed exclusively by Google Play Billing. The app only reads the price and subscription status from Google. It receives no banking information: no card, no IBAN. Google handles that data under its <a href="https://policies.google.com/privacy" rel="noopener">Privacy Policy</a>. Manage or cancel in the Play Store → Payments &amp; subscriptions.</p>
+
+<h2>4. Profile email</h2>
+<p>The email requested in “Settings → Creator profile” is required before subscribing. It is <strong>stored only on your device</strong> (validated, lowercased), <strong>never sent</strong> to the publisher, any third party or Google by the app, and <strong>never used for marketing</strong>. You can replace it with another valid address at any time; effective deletion requires “Clear all data” or uninstalling the app.</p>
+
+<h2>5. Data stored on your device</h2>
+<table>
+  <tr><th>Category</th><th>Examples</th><th>Location</th></tr>
+  <tr><td>Projects</td><td>title, platform, hook, script, description, hashtags, publishing</td><td>Local SQLite database <code>creatorshub.db</code></td></tr>
+  <tr><td>Ideas and shots</td><td>video ideas, shot lists, notes</td><td>Local SQLite database</td></tr>
+  <tr><td>Statistics</td><td>views, likes, comments, subscribers, revenue entered by you</td><td>Local SQLite database</td></tr>
+  <tr><td>Editor</td><td>drafts, MP4 exports, thumbnails</td><td>Local SQLite and app files</td></tr>
+  <tr><td>Profile and settings</td><td>name, email, niche, language, preferences</td><td>Local SQLite database</td></tr>
+  <tr><td>API keys</td><td>AI key and music key, if you enter them</td><td>System secure store (Android Keystore / iOS Keychain)</td></tr>
+  <tr><td>Generated media</td><td>AI images, AI audio tracks</td><td>App's private directory</td></tr>
+  <tr><td>Exported videos</td><td>MP4 files shared from the editor</td><td>Gallery chosen by the user</td></tr>
+</table>
+<p>These data never leave your device, except as described in section 6.</p>
+<div class="box note">
+  The local SQLite database is <strong>not encrypted by the app</strong>: it is protected by the operating system's private storage (sandbox). Only API keys are encrypted in the secure store and <strong>excluded from Android automatic backups and device transfers</strong>. Some technical preferences may still be included in those backups. A few demo projects are created locally on first launch.
+</div>
+
+<h2>6. Optional third-party services</h2>
+<p>AI features are <strong>disabled by default</strong> and only work if you enable them with your own API key. Your prompt and key are then sent over <strong>HTTPS</strong> (with the providers offered by default) directly to the provider you configured — text, image or music. If you enter another URL, encryption depends on that URL. The publisher has no access to your key, the content sent or the responses. The provider's terms apply. Removing the key in settings immediately disables these transfers.</p>
+<p><strong>Embedded Google components:</strong> Google Play Billing and Firebase Cloud Messaging (via the notification library). <strong>No push token is registered or transmitted</strong>: only local notifications are used. Google Play <em>Install Referrer</em> may also be initialized by the billing library. These components receive neither your email nor your projects.</p>
+<p><strong>Voluntary export:</strong> the JSON backup exported from Settings → Data contains your projects, settings and email address. You are solely responsible for the file once shared. No other third party receives user data from the app.</p>
+
+<h2>7. Android permissions</h2>
+<table>
+  <tr><th>Permission</th><th>Purpose</th></tr>
+  <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Google Play subscription and AI services you configure</td></tr>
+  <tr><td><code>READ_MEDIA_IMAGES / VIDEO / AUDIO</code>, <code>READ_MEDIA_VISUAL_USER_SELECTED</code></td><td>Import and save your media</td></tr>
+  <tr><td><code>FOREGROUND_SERVICE</code>, <code>MODIFY_AUDIO_SETTINGS</code>, <code>WAKE_LOCK</code></td><td>Audio/video playback while editing</td></tr>
+  <tr><td><code>SCHEDULE_EXACT_ALARM</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>POST_NOTIFICATIONS</code>, <code>VIBRATE</code></td><td>Local publishing reminders</td></tr>
+  <tr><td><code>com.android.vending.BILLING</code></td><td>Subscription processing by Google Play</td></tr>
+</table>
+<p>The manifest also includes technical permissions added by Google libraries (network, wake lock, boot, <em>Install Referrer</em>, biometrics) and by some device manufacturers (icon badges). They do not grant access to your contacts, messages, location, camera or microphone.</p>
+
+<h2>8. Retention and deletion</h2>
+<p>Your data stays on your device as long as the app is installed; the publisher retains nothing and there is no automatic expiration. “Settings → Data → Clear all data” removes the local database, <strong>including your email</strong>, but <strong>keeps</strong> API keys, generated media files, videos in your gallery and already scheduled reminders. Remove a key with the dedicated button in AI settings; delete videos from your Photos app. Uninstalling removes the database, generated files and secure-store keys; exported videos remain in the gallery. Subscription cancellation is handled by Google and does not erase your local data.</p>
+
+<h2>9. Children and transfers</h2>
+<p>The app is not intended for children under 13 (or 16 depending on the country) and does not collect their data. The publisher transfers no data; the only transfers are to Google and the AI provider you choose.</p>
+
+<h2>10. Changes and contact</h2>
+<p>Any change updates the date at the top of this page. Contact: <strong>ZSedreddine@gmail.com</strong> — Publisher: SEDREDDINE ZAKARIA.</p>
+
+</section>
+
+<footer>
+  © 2026 SEDREDDINE ZAKARIA · Créateurs Studio 1.2.0 · <code>com.zakaeia.creatorshub</code>
+</footer>
+
+</div>
+
+<script>
+function setLang(lang) {
+  document.getElementById('fr').hidden = lang !== 'fr';
+  document.getElementById('en').hidden = lang !== 'en';
+  document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.documentElement.lang = lang;
+}
+</script>
+</body>
+</html>

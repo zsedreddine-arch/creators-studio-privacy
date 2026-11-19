@@ -1,0 +1,27 @@
+# Système / éditeurs
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# Journaux et dépendances
+*.log
+node_modules/
+_site/
+.jekyll-cache/
+
+# Sécurité — ne jamais publier de secrets, de clés ou de binaires
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+keystore.properties
+*.apk
+*.aab
+*IBAN*
