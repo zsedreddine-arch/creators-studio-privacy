@@ -75,19 +75,20 @@
   <tr><td>Statistiques</td><td>vues, likes, commentaires, abonnés, revenus saisis</td><td>Base SQLite locale</td></tr>
   <tr><td>Éditeur</td><td>brouillons, exports MP4, miniatures</td><td>Base SQLite et fichiers privés</td></tr>
   <tr><td>Profil et réglages</td><td>nom, e-mail facultatif, niche, langue, préférences</td><td>Base SQLite locale</td></tr>
-  <tr><td>Compteurs IA</td><td>mois et nombre de générations texte/image/musique</td><td>Base SQLite locale, clé <code>ai_usage</code></td></tr>
+  <tr><td>Compteurs IA</td><td>mois et nombre de générations texte/image/musique/vidéo 3D</td><td>Base SQLite locale, clé <code>ai_usage</code></td></tr>
   <tr><td>Clés personnelles</td><td>clé IA et clé musicale, si vous les saisissez</td><td>Coffre sécurisé (Android Keystore / iOS Keychain)</td></tr>
-  <tr><td>Médias générés</td><td>images IA, pistes audio, vidéos typographiques</td><td>Dossier privé de l'application</td></tr>
+  <tr><td>Médias générés</td><td>images IA, pistes audio, vidéos typographiques, vidéos 3D IA</td><td>Dossier privé de l'application</td></tr>
   <tr><td>Vidéos exportées</td><td>MP4 partagés depuis l'éditeur</td><td>Galerie choisie par l'utilisateur</td></tr>
 </table>
 <div class="box note">La base SQLite locale n'est <strong>pas chiffrée par l'application</strong> : elle est protégée par le stockage privé du système. Seules les clés personnelles sont chiffrées dans le coffre sécurisé et exclues des sauvegardes automatiques Android et des transferts d'appareil.</div>
 <h2>6. IA incluse, relais et fournisseurs</h2>
-<p>Avec Premium, l'application envoie au relais de l'éditeur vos prompts, le modèle souhaité, l'identifiant produit, le jeton d'achat Google et des en-têtes techniques. Le relais vérifie l'abonnement, applique le quota mensuel (<strong>150 textes, 30 images, 8 musiques</strong>) puis transmet la demande au fournisseur d'IA configuré côté serveur. Les clés des fournisseurs ne sont jamais embarquées dans l'application.</p>
+<p>Avec Premium, l'application envoie au relais de l'éditeur vos prompts, le modèle souhaité, l'identifiant produit, le jeton d'achat Google et des en-têtes techniques. Le relais vérifie l'abonnement, applique le quota mensuel (<strong>150 textes, 30 images, 8 musiques, 3 vidéos 3D</strong>) puis transmet la demande au fournisseur d'IA configuré côté serveur. Les clés des fournisseurs ne sont jamais embarquées dans l'application.</p>
 <p>Le relais ne doit pas recevoir votre e-mail, vos projets locaux ni vos clés personnelles. Les échanges utilisent <strong>HTTPS</strong>. Les prompts et réponses ne doivent pas être conservés au-delà du traitement, hors journaux techniques minimaux sans contenu. Les compteurs liés au jeton d'achat sont réinitialisés chaque mois. Pour une demande de suppression : <strong>ZSedreddine@gmail.com</strong>. Le lieu de traitement dépend du fournisseur d'IA choisi par le relais.</p>
 <h3>Mode avancé : clé personnelle</h3>
 <p>Si vous activez votre propre clé, votre prompt et votre clé vont <strong>directement</strong> au service que vous avez configuré. L'éditeur n'a connaissance ni de la clé, ni du contenu, ni de la réponse. Retirer la clé désactive immédiatement ces envois.</p>
 <h3>Vidéo typographique IA</h3>
 <p>Cette fonction crée des diapositives de texte animées en MP4 (zoom, fondus, musique optionnelle, calligraphie arabe). Ce n'est ni une vidéo filmée, ni une voix générée, ni un rendu d'images photorealistes. Le plan peut être produit localement ou via l'IA incluse.</p>
+<h3>Vidéo IA 3D</h3><p>Lorsque le relais est déployé, cette fonction envoie une description textuelle et récupère un MP4 3D. Elle n'envoie <strong>aucune photo, aucun visage et aucune voix</strong> ; le prompt impose l'absence de personne identifiable. Quota dédié : 3 générations par mois.</p>
 <p><strong>Composants Google :</strong> Google Play Billing et Firebase Cloud Messaging (via la bibliothèque de notifications). <strong>Aucun token push n'est enregistré ni transmis</strong> : seules des notifications locales sont utilisées. Google Play <em>Install Referrer</em> peut être initialisé par la bibliothèque d'achat. Ces composants ne reçoivent ni votre e-mail ni vos projets.</p>
 <p><strong>Export volontaire :</strong> la sauvegarde JSON contient vos projets, réglages et votre e-mail facultatif. Vous êtes seul responsable du fichier une fois partagé. Aucun autre service tiers ne reçoit de données utilisateur.</p>
 <h2>7. Autorisations Android</h2>
@@ -134,17 +135,18 @@
   <tr><td>Statistics</td><td>views, likes, comments, subscribers, revenue you enter</td><td>Local SQLite database</td></tr>
   <tr><td>Editor</td><td>drafts, MP4 exports, thumbnails</td><td>Local SQLite database and private files</td></tr>
   <tr><td>Profile and settings</td><td>name, optional email, niche, language, preferences</td><td>Local SQLite database</td></tr>
-  <tr><td>AI counters</td><td>month and text/image/music generation counts</td><td>Local SQLite database, <code>ai_usage</code> key</td></tr>
+  <tr><td>AI counters</td><td>month and text/image/music/3D video generation counts</td><td>Local SQLite database, <code>ai_usage</code> key</td></tr>
   <tr><td>Personal keys</td><td>AI key and music key, only if you enter them</td><td>System secure store (Android Keystore / iOS Keychain)</td></tr>
-  <tr><td>Generated media</td><td>AI images, audio tracks, typographic videos</td><td>App's private file directory</td></tr>
+  <tr><td>Generated media</td><td>AI images, audio tracks, typographic videos, AI 3D videos</td><td>App's private file directory</td></tr>
   <tr><td>Exported videos</td><td>MP4 files shared from the editor</td><td>Gallery chosen by the user</td></tr>
 </table>
 <div class="box note">The local SQLite database is <strong>not encrypted by the app</strong>: it is protected by the operating system's private storage. Only personal keys are encrypted in the secure store and excluded from Android automatic backups and device transfers.</div>
 <h2>6. Included AI, relay and providers</h2>
-<p>With Premium, the app sends the publisher's relay your prompts, requested model, product ID, Google purchase token and technical headers. The relay verifies the subscription, enforces the monthly quota (<strong>150 texts, 30 images, 8 music tracks</strong>), then forwards the request to the server-configured AI provider. Provider keys are never embedded in the app.</p>
+<p>With Premium, the app sends the publisher's relay your prompts, requested model, product ID, Google purchase token and technical headers. The relay verifies the subscription, enforces the monthly quota (<strong>150 texts, 30 images, 8 music tracks, 3 3D videos</strong>), then forwards the request to the server-configured AI provider. Provider keys are never embedded in the app.</p>
 <p>The relay must not receive your email, local projects or personal keys. Exchanges use <strong>HTTPS</strong>. Prompts and responses must not be retained beyond processing, apart from minimal technical logs without content. Token-linked counters reset monthly. For a deletion request: <strong>ZSedreddine@gmail.com</strong>. Processing location depends on the AI provider selected by the relay.</p>
 <h3>Advanced mode: personal key</h3><p>If you enable your own key, your prompt and key go <strong>directly</strong> to the service you configured. The publisher has no access to the key, content or response. Removing the key immediately disables these transfers.</p>
 <h3>AI typographic video</h3><p>This feature creates animated text slides exported as MP4 (zoom, fades, optional music, correct Arabic calligraphy). It is neither filmed video, generated voice-over nor photorealistic image rendering. The plan can be produced locally or via included AI.</p>
+<h3>AI 3D video</h3><p>When the relay is deployed, this feature sends a text description and downloads an MP4. It sends <strong>no photo, no face and no voice</strong>; the prompt explicitly requires no identifiable person. Dedicated quota: 3 generations per month.</p>
 <p><strong>Google components:</strong> Google Play Billing and Firebase Cloud Messaging (via the notification library). <strong>No push token is registered or transmitted</strong>: only local notifications are used. Google Play <em>Install Referrer</em> may be initialized by the billing library. These components receive neither your email nor your projects.</p>
 <p><strong>Voluntary export:</strong> the JSON backup contains your projects, settings and optional email. You are solely responsible for the file once shared. No other third party receives user data.</p>
 <h2>7. Android permissions</h2>
