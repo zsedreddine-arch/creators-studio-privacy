@@ -1,6 +1,6 @@
 # Créateurs Studio — Politique de confidentialité
 
-Politique de confidentialité de l'application **Créateurs Studio 1.2.0** (Android, compatible iOS), publiée en HTTPS via GitHub Pages.
+Politique de confidentialité de l'application **Créateurs Studio 1.3.0** (Android, compatible iOS), publiée en HTTPS via GitHub Pages.
 
 🌐 **Page publique :** https://zsedreddine-arch.github.io/creators-studio-privacy/
 
